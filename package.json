@@ -1,0 +1,12 @@
+{
+  "name": "reyka-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html, css/*.css'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
