@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: #fff;
 }
 
 body {
@@ -42,8 +43,13 @@ section {
     background-size: cover;
 }
 
+.parallax:nth-of-type(1) {
+    background: url('./background2');
+}
+
 h1, h2, h3 {
-    font-family: 'Ropa Sans', sans-serifR;
+    font-family: 'Ropa Sans', sans-serif;
+    color: #5E8795;
 }
 
 .button {
@@ -52,7 +58,8 @@ h1, h2, h3 {
     border: 2px solid #6FBE57;
     border-radius: 5px;
     transition-duration: 0.4s;
-    background-color: #fff;
+    color: #000;
+    background-color: #B1B1B1;
     margin-top: 20px;
 }
 
