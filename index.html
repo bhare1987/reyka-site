@@ -1,29 +1,54 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>Reyka</title>
+        <title>Rayka</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ropa+Sans" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <header>
-            <h1>Reyka 
-                <div>
-                    <h2></h2>
-                    <div><a href="#email" class="button">Sign Up</a></div>
+        <div id="signUpModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="content">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1RcxeVNt5SVdCcmztSBwR8PLg3hP9xHT3JenHhi14THelNQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>        
                 </div>
-            </h1>
-            <div></div>
-            <div id="email" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd1RcxeVNt5SVdCcmztSBwR8PLg3hP9xHT3JenHhi14THelNQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>        
-                    </div>
+            </div>
+        </div>
+        <header>
+            <div>
+                <img src="logo.png" />
+                <div>
+                    <div><button id="signUpButton" class="button">Sign Up</button></div>
                 </div>
             </div>
         </header>
         <section>
-            
+            <h1>Explore</h1>
+            <p>Need recommendations for places to go? See what treasures your friends have discovered or scroll through the feed for inspiration.</p>
         </section>
+        <section class="parallax"></section>
+        <section>
+            <h1>Share</h1>
+            <p>Share where you've been and your favorite places to travel. Try new places, unlock badges, and compete with your friends.</p>
+        </section>
+        <section class="parallax"></section>
+        <section>
+            <h1>Cultivate</h1>
+            <p>Tired of outdated rankings? Search for the most favorited places (such as the best restaurants in a city or the best towns in Europe) from people you know and trust.</p>
+        </section>
+        <section class="parallax"></section>
+        <section>
+            <h1>Master</h1>
+            <p>Curious what the world's veteran travelers recommend? Find the best cities, bars, restaurants, and more from experts.</p>
+        </section>
+        <footer>
+            <ul>
+                <li>Facebook</li>
+                <li>LinkedIn</li>
+                <li>Twitter</li>
+            </ul>
+        </footer>
+        <script src="index.js"></script>
     </body>
 </html>

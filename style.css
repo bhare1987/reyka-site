@@ -1,170 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
     background-image: url("./background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Arial, sans-serif;
-}
-
-header {
     height: 100%;
     text-align: center;
 }
 
-section {
-    margin-top: 100%;
-    height: 2000px;
-    background-color: rgba(255,255,255,.25)
-}
-
-h1 {
-    color: #fff;
+header > div {
     position: absolute;
-    top: 42%;
+    top: 20%;
     left: 0;
     right: 0;
-    font-size: 4.5em;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    text-shadow: 1px 1px 1px #000;
 }
 
-h1 > div {
-    margin-top: 10px;
+header img {
+    width: auto;
+    height: 50%;
+} 
+
+section {
+    background-color: #B1B1B1;
 }
 
-#wrapper {
-	width: 100px;
-	margin: 0 auto;
-	background: #fff;
-	padding: 20px;
-	border: 10px solid #aaa;
-	border-radius: 15px;
-	background-clip: padding-box;
-	text-align: center;
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-/*
-Modal from https://codepen.io/peiche/pen/vhqym
-*/
+h1, h2, h3 {
+    font-family: 'Ropa Sans', sans-serifR;
+}
 
 .button {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 13px;
-	padding: 5px 10px;
-	border: 1px solid #aaa;
-	background-color: #eee;
-	background-image: linear-gradient(top, #fff, #f0f0f0);
-	border-radius: 2px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
-	color: #666;
-	text-decoration: none;
-	text-shadow: 0 1px 0 #fff;
-	cursor: pointer;
-	transition: all 0.2s ease-out;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    border: 2px solid #6FBE57;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    background-color: #fff;
+    margin-top: 20px;
 }
 
 .button:hover {
-    border-color: #999;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    background-color: #6FBE57;
+    color: #fff;
+    cursor: pointer;
 }
 
-.button:active {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+.modal-open {
+    overflow: hidden;
 }
 
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
     left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.5);
-	transition: opacity 200ms;
-    visibility: hidden;
-	opacity: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.overlay.light {
-    background: rgba(255,255,255,0.5);
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.overlay .cancel {
-    position: absolute;
+.content > iframe {
     width: 100%;
     height: 100%;
-    cursor: default;
 }
 
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-.popup {
-	margin: 75px auto;
-	padding: 20px;
-	background: #fff;
-	border: 1px solid #666;
-	width: 50%;
-	box-shadow: 0 0 50px rgba(0,0,0,0.5);
-	position: relative;
-}
-
-.popup h2 {
-    margin-top: 0;
-    color: #666;
-    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
-}
-
-.popup.light {
-    border-color: #aaa;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
-}
-
-.popup .close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 20px;
-    right: 20px;
-    opacity: 0.8;
-    transition: all 200ms;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #666;
-    padding-left: 5px;
-    padding-bottom: 5px;
-    background-color: rgba(0,0,0,0.35);
-}
-
-.popup:hover {
-    opacity: 1;
-}
-
-.popup .content {
-    max-height: 400px;
-    overflow: auto;
-}
-
-.popup p {
-    margin: 0 0 1em;
-}
-
-.popup p:last-child {
-    margin: 0;
-}
-
-iframe {
-    height: 100%;
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    .popup {
+@media (max-width: 400px) {
+    header img {
         width: 80%;
+        height: auto;
     }
+
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
