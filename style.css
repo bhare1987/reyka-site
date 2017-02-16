@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
     color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -34,22 +36,71 @@ header img {
 
 section {
     background-color: #B1B1B1;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+/*section:nth-of-type(2n) {
+    flex-direction: row-reverse;
+}*/
+
+div.image-container {
+    flex: 0 0 33%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section:nth-of-type(1) div.image-container {
+    background-image: url('./explore.png');
+}
+section:nth-of-type(2) div.image-container {
+    background-image: url('./share.png');
+}
+section:nth-of-type(3) div.image-container {
+    background-image: url('./cultivate.png');
+}
+section:nth-of-type(4) div.image-container {
+    background-image: url('./master.png');
+}
+
+div.content-container {
+    padding: 10px;
+    flex: 0 0 67%;
+}
+
+aside.parallax:nth-of-type(1) {
+    background-image: url('./background2.jpeg');
+}
+aside.parallax:nth-of-type(2) {
+    background-image: url('./background3.jpg');
+}
+aside.parallax:nth-of-type(3) {
+    background-image: url('./background4.jpg');
 }
 
 .parallax {
+    height: 50%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.parallax:nth-of-type(1) {
-    background: url('./background2');
-}
-
 h1, h2, h3 {
     font-family: 'Ropa Sans', sans-serif;
     color: #5E8795;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 .button {
@@ -61,6 +112,7 @@ h1, h2, h3 {
     color: #000;
     background-color: #B1B1B1;
     margin-top: 20px;
+    padding: 5px;
 }
 
 .button:hover {
@@ -101,7 +153,7 @@ h1, h2, h3 {
     height: 100%;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     header img {
         width: 80%;
         height: auto;
@@ -109,6 +161,19 @@ h1, h2, h3 {
 
     .modal-content {
         width: 100%;
+    }
+
+    section {
+        height: 100%;
+        flex-direction: column;
+    }
+
+    div.image-container {
+        flex: 0 0 50%;
+    } 
+
+    div.content-container {
+        flex: 0 0 50%;
     }
 }
 
@@ -125,4 +190,12 @@ h1, h2, h3 {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+footer {
+    background-color: #5E8795;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
