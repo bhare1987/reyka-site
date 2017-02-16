@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -108,12 +108,13 @@ h1, h2, h3 {
 }
 
 h1 {
+    text-shadow: 1px 1px 5px black;
     font-size: 4em;
     margin-bottom: 15px;
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 2.2em;
 }
 
 .button {
