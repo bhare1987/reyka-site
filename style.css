@@ -22,7 +22,20 @@ header {
     text-align: center;
 }
 
-header > div {
+header::after {
+    position: absolute;
+    content: '\f078';
+    font-family: 'FontAwesome';
+    color: #fff;
+    bottom: 25px;
+    font-size: 2em;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header > div, .coming-soon > div {
     position: absolute;
     top: 20%;
     left: 0;
@@ -31,22 +44,40 @@ header > div {
 
 header img {
     width: auto;
-    height: 50%;
+    height: 55%;
 } 
 
-section {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+section:first-of-type {
+    height: 75%;
     padding: 15px;
 }
 
-/*section:nth-of-type(2n) {
-    flex-direction: row-reverse;
-}*/
+article {
+    height: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+
+article::after {
+    content: '';
+    width: 25%;
+    border: 1px solid #d3d3d3;
+    position: absolute;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+
+article:last-of-type::after {
+    display: none;
+}
 
 div.image-container {
-    flex: 0 0 33%;
+    flex: 0 0 30%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -75,22 +106,14 @@ section:nth-of-type(5) div.image-container {
 
 div.content-container {
     padding: 10px;
-    flex: 0 0 67%;
+    padding-left: 25px;
+    flex: 0 0 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 aside.parallax:nth-of-type(1) {
-    background-image: url('./img/background2.jpeg');
-}
-aside.parallax:nth-of-type(2) {
-    background-image: url('./img/background3.jpg');
-}
-aside.parallax:nth-of-type(3) {
-    background-image: url('./img/background4.jpg');
-}
-aside.parallax:nth-of-type(4) {
     background-image: url('./img/background5.jpg');
 }
 
@@ -103,18 +126,31 @@ aside.parallax:nth-of-type(4) {
 }
 
 h1, h2, h3 {
-    font-family: 'Ropa Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #5E8795;
 }
 
 h1 {
-    text-shadow: 1px 1px 5px black;
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 15px;
 }
 
 p {
-    font-size: 2.2em;
+    font-size: 1.5em;
+}
+
+.coming-soon {
+    height: 50%;
+    position: relative;
+    text-align: center;
+    background-color: #5E8795;
+    padding: 30px;
+    margin-top: 30px;
+    border-bottom: 2px solid #fff;
+}
+
+.coming-soon h1, .coming-soon p {
+    color: #fff;
 }
 
 .button {
@@ -130,8 +166,8 @@ p {
 }
 
 .button:hover {
-    background-color: #6FBE57;
-    color: #fff;
+    background-color: #fff;
+    color: #5E8795;
     cursor: pointer;
 }
 
@@ -177,7 +213,7 @@ p {
         width: 100%;
     }
 
-    section {
+    article {
         height: 100%;
         flex-direction: column;
         font-size: .75em;
