@@ -141,6 +141,7 @@ p {
 
 .coming-soon {
     height: 50%;
+    min-height: 440px;
     position: relative;
     text-align: center;
     background-color: #5E8795;
