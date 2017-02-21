@@ -91,16 +91,16 @@ section:nth-of-type(1) {
     text-align: center;
 }
 
-section:nth-of-type(2) div.image-container {
+article:nth-of-type(1) div.image-container {
     background-image: url('./img/explore.png');
 }
-section:nth-of-type(3) div.image-container {
+article:nth-of-type(2) div.image-container {
     background-image: url('./img/share.png');
 }
-section:nth-of-type(4) div.image-container {
+article:nth-of-type(3) div.image-container {
     background-image: url('./img/cultivate.png');
 }
-section:nth-of-type(5) div.image-container {
+article:nth-of-type(4) div.image-container {
     background-image: url('./img/master.png');
 }
 
@@ -266,4 +266,14 @@ footer a:hover {
 
 footer > ul > li > a, footer > ul > li > a > i {
     color: #fff;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    header, .parallax {
+        background-attachment: scroll;
+    }
+    
+    p {
+    	font-size: 1.75em;
+    }
 }
