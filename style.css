@@ -118,6 +118,9 @@ article:nth-of-type(3) div.image-container {
 article:nth-of-type(4) div.image-container {
     background-image: url('./img/master.png');
 }
+article:nth-of-type(5) div.image-container {
+    background-image: url('./img/connect.png');
+}
 
 div.content-container {
     padding: 10px;
